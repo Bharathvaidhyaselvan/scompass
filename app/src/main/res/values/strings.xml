@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Scompass</string>
+    <string name="welcome_to">Welcome to,</string>
+    <string name="scompass">Scompass</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_with_google">Login With Google</string>
+    <string name="before_getting_started">Before Getting Started,</string>
+    <string name="login_with_your_google_account_and_get_using_our_scompass_app">Login With Your Google Account and get using our Scompass App.</string>
+    <string name="default_web_client_id" translatable="false">AIzaSyDrMA9v3Wy5_vqqBUhzuc2i7egU8NV9DV0</string>
+    <string name="profile_description">Profile image\n</string>
+    <string name="all_in_one_trip_planner_with_social_experience">All in one Trip Planner with Social Experience</string>
+    <string name="social_feed">Moments</string>
+    <string name="suggestion_box">Suggestion Box</string>
+    <string name="traveler_s_profile">Traveler\'s Profile</string>
+    <string name="about_desc">Scompass is a tool for those who didn\'t know well about Tourist places. So When you explore our app, you can find famous beaches, hotels, embassys, museums and all basic informations that a person wants to know before visiting a place.</string>
+    <string name="delete_your_account">Delete your account</string>
+    <string name="about_us">About Us</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="logout">Logout</string>
+    <string name="scompass_desc">logo of scompass in the splash screen</string>
+    <string name="login_using_your_email_or_just_use_your_google_account_to_login">Login using your email or just use your google account to login.</string>
+    <string name="login_desc">Login With Your Google Account and get using our Scompass App.</string>
+    <string name="home_menu" />
+    <string name="enter_your_name">Enter your name</string>
+    <string name="email">Enter your Email</string>
+    <string name="explore_new_tours_to_your_destination">Explore new tours to your destination.</string>
+    <string name="popular_trips">Popular Trips:</string>
+    <string name="view_all">view all</string>
+    <string name="book_now">Book Now</string>
+    <string name="in_this_package_we_cover_the_trip_from_chennai_to_yelagiri">In this package, we cover the trip from Chennai to Yelagiri</string>
+    <string name="stay_tunned_for_our_moments_social_experience">Stay Tunned for our Moments Social Experience.</string>
+    <string name="upload_button">Upload Button</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="tourists_should_pack_reusable_water_bottles_cutlery_and_bags_to_reduce_single_use_plastic_waste">Tourists should pack reusable water bottles, cutlery, and bags to reduce single-use plastic waste.</string>
+</resources>
