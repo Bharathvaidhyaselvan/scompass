@@ -71,7 +71,7 @@
                     android:layout_weight="1"
                     android:foregroundGravity="center"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/kodaikanal" />
+                    app:srcCompat="@drawable/kodaikanal_img" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -132,7 +132,7 @@
                     android:layout_weight="1"
                     android:foregroundGravity="center"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/ooty" />
+                    app:srcCompat="@drawable/ooty_img" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -197,7 +197,7 @@
                     android:layout_weight="1"
                     android:foregroundGravity="center"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/kollihills" />
+                    app:srcCompat="@drawable/kolli_img" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

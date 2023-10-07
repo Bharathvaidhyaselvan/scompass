@@ -144,11 +144,12 @@ public class MomentsActivity extends AppCompatActivity {
                                                                     if (snapshotusername.exists())
                                                                     {
 
-                                                                        POSTID.add(postid.getKey());
-                                                                        POSTIMAGE.add(snapshotpostimg.getValue(String.class));
-                                                                        PROFILEPHOTO.add(snapshotprofileimg.getValue(String.class));
-                                                                        CAPTION.add(snapshotcaption.getValue(String.class));
-                                                                        USERNAME.add(snapshotusername.getValue(String.class));
+                                                                        POSTID.add(0, postid.getKey());
+                                                                        POSTIMAGE.add(0, snapshotpostimg.getValue(String.class));
+                                                                        PROFILEPHOTO.add(0, snapshotprofileimg.getValue(String.class));
+                                                                        CAPTION.add(0, snapshotcaption.getValue(String.class));
+                                                                        USERNAME.add(0, snapshotusername.getValue(String.class));
+
 
                                                                         SetPost setPost = new SetPost(MomentsActivity.this,
                                                                                 POSTID,
@@ -257,16 +258,11 @@ class SetPost extends RecyclerView.Adapter<SetPost.SetPostChild>
 
             }
         });
-        // Populate the UI elements with post data
         holder.captionTextView.setText(CAPTION.get(position));
-        // Set the username to the usernameTextView
-        holder.usernameTextView.setText(USERNAME.get(position)); // Use the userName variable
-        // Load the post image using Glide (you may need to add Glide to your dependencies)
+        holder.usernameTextView.setText(USERNAME.get(position));
         Glide.with(context)
                 .load(POSTIMAGE.get(position))
                 .into(holder.postImageView);
-        // Show the image if is not -1 in imageview.
-        // If the post uploader has no image, we get -1 in string.
         if (!PROFILEPHOTO.get(position).equals("-1"))
         {
             Glide.with(context)
@@ -281,7 +277,6 @@ class SetPost extends RecyclerView.Adapter<SetPost.SetPostChild>
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
                 if (currentUser != null) {
-                    // User is signed in
                     String userEmail = currentUser.getEmail();
 
                     if (userEmail != null) {

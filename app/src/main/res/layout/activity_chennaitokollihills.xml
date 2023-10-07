@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:rotation="180"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/kollihills" />
+            app:srcCompat="@drawable/kolli_img" />
 
     </androidx.cardview.widget.CardView>
 

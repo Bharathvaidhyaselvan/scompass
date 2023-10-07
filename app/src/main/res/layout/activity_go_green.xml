@@ -154,7 +154,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:scaleType="centerCrop"
-                                        app:srcCompat="@drawable/packresponsible" />
+                                        app:srcCompat="@drawable/packresponsible_img" />
                                 </androidx.cardview.widget.CardView>
 
                                 <LinearLayout
@@ -216,7 +216,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:scaleType="centerCrop"
-                                        app:srcCompat="@drawable/trashreceptable" />
+                                        app:srcCompat="@drawable/trashrecep_img" />
                                 </androidx.cardview.widget.CardView>
 
                                 <LinearLayout
@@ -278,7 +278,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:scaleType="centerCrop"
-                                        app:srcCompat="@drawable/carrytrashbags" />
+                                        app:srcCompat="@drawable/trash_img" />
                                 </androidx.cardview.widget.CardView>
 
                                 <LinearLayout
@@ -340,7 +340,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:scaleType="centerCrop"
-                                        app:srcCompat="@drawable/card_quotes" />
+                                        app:srcCompat="@drawable/leavenotrace_img" />
                                 </androidx.cardview.widget.CardView>
 
                                 <LinearLayout
@@ -405,7 +405,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:scaleType="centerCrop"
-                                        app:srcCompat="@drawable/rollmodel" />
+                                        app:srcCompat="@drawable/rolemodel" />
                                 </androidx.cardview.widget.CardView>
 
                                 <LinearLayout

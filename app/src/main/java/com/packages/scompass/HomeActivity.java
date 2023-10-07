@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -47,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         CardView cardHangouts = findViewById(R.id.hangouts);
         CardView cardEmbassy = findViewById(R.id.embassy);
         CardView cardCoffee = findViewById(R.id.coffee);
+        CardView emergency = findViewById(R.id.emergency);
 
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
@@ -96,6 +96,11 @@ public class HomeActivity extends AppCompatActivity {
 
         cardQuoteAlign.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, GoGreen.class);
+            startActivity(intent);
+        });
+
+        emergency.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, EmergencyActivity.class);
             startActivity(intent);
         });
 

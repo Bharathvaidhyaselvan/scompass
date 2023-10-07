@@ -77,11 +77,31 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@drawable/emergency" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/emergency"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:foregroundGravity="center_vertical|center_horizontal"
+                    app:cardBackgroundColor="#EFF0F0"
+                    app:cardCornerRadius="30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/emergency" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -390,7 +410,7 @@
                                     android:layout_weight="1"
                                     android:foregroundGravity="center"
                                     android:scaleType="fitXY"
-                                    app:srcCompat="@drawable/kodaikanal" />
+                                    app:srcCompat="@drawable/kodaikanal_img" />
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
@@ -403,12 +423,11 @@
                                         android:layout_marginStart="8dp"
                                         android:layout_marginEnd="8dp"
                                         android:fontFamily="@font/lemonmil_bold"
-                                        android:foregroundGravity="bottom|center"
-                                        android:gravity="bottom|center"
+                                        android:gravity="center"
                                         android:text="KODAIKANAL"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="24sp"
+                                        android:textSize="20sp"
                                         app:layout_constraintBottom_toTopOf="@+id/button2"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.0"
@@ -450,7 +469,7 @@
                                     android:layout_weight="1"
                                     android:foregroundGravity="center"
                                     android:scaleType="fitXY"
-                                    app:srcCompat="@drawable/ooty" />
+                                    app:srcCompat="@drawable/ooty_img" />
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
@@ -463,18 +482,17 @@
                                         android:layout_marginStart="8dp"
                                         android:layout_marginEnd="8dp"
                                         android:fontFamily="@font/lemonmil_bold"
-                                        android:foregroundGravity="bottom|center"
-                                        android:gravity="bottom|center"
+                                        android:gravity="center"
                                         android:text="OOTY"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="24sp"
+                                        android:textSize="20sp"
                                         app:layout_constraintBottom_toTopOf="@+id/button3"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.0"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintVertical_bias="0.675" />
+                                        app:layout_constraintVertical_bias="0.67" />
 
                                     <Button
                                         android:id="@+id/button3"
@@ -511,7 +529,7 @@
                                     android:layout_weight="1"
                                     android:foregroundGravity="center"
                                     android:scaleType="fitXY"
-                                    app:srcCompat="@drawable/kollihills" />
+                                    app:srcCompat="@drawable/kolli_img" />
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
@@ -524,12 +542,11 @@
                                         android:layout_marginStart="8dp"
                                         android:layout_marginEnd="8dp"
                                         android:fontFamily="@font/lemonmil_bold"
-                                        android:foregroundGravity="bottom|center"
-                                        android:gravity="bottom|center"
+                                        android:gravity="center"
                                         android:text="KOLLI HILLS"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="24sp"
+                                        android:textSize="20sp"
                                         app:layout_constraintBottom_toTopOf="@+id/button4"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.0"
@@ -585,12 +602,11 @@
                                         android:layout_marginStart="8dp"
                                         android:layout_marginEnd="8dp"
                                         android:fontFamily="@font/lemonmil_bold"
-                                        android:foregroundGravity="bottom|center"
-                                        android:gravity="bottom|center"
+                                        android:gravity="center"
                                         android:text="YELAGIRI"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="24sp"
+                                        android:textSize="20sp"
                                         app:layout_constraintBottom_toTopOf="@+id/button5"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.0"
@@ -642,7 +658,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/card_quotes" />
+                            app:srcCompat="@drawable/go_green" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -656,59 +672,101 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <TextView
-                                    android:id="@+id/textView22"
+                                <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="50dp"
-                                    android:fontFamily="@font/lemonmil_regular"
-                                    android:gravity="center"
-                                    android:paddingLeft="8dp"
-                                    android:paddingRight="8dp"
-                                    android:text="Tourists alone contribute to global waste production of 1.3 billion tons each year, as reported by the UNEP."
-                                    android:textColor="@color/white"
-                                    android:textColorHighlight="@color/white"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toTopOf="@+id/textView12"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <TextView
-                                    android:id="@+id/textView12"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="2dp"
-                                    android:fontFamily="@font/lemonmil_regular"
-                                    android:gravity="center"
-                                    android:paddingLeft="8dp"
-                                    android:paddingRight="8dp"
-                                    android:text="When traveling, please refrain from littering the environment"
-                                    android:textColor="@color/white"
-                                    android:textColorHighlight="@color/white"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toTopOf="@+id/textView16"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-                                <TextView
-                                    android:id="@+id/textView16"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:fontFamily="@font/poppinsblack"
-                                    android:gravity="center"
-                                    android:paddingLeft="8dp"
-                                    android:paddingRight="8dp"
-                                    android:text="&quot;Go Geen&quot;"
-                                    android:textColor="@color/white"
-                                    android:textColorHighlight="@color/white"
-                                    android:textSize="16sp"
+                                    android:layout_height="match_parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/textView22"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="60dp"
+                                        android:fontFamily="@font/lemonmil_bold"
+                                        android:gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:text="Don't"
+                                        android:textColor="@color/white"
+                                        android:textColorHighlight="@color/white"
+                                        android:textSize="28sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView23"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lemonmil_bold"
+                                        android:gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:text="Litter"
+                                        android:textColor="@color/white"
+                                        android:textColorHighlight="@color/white"
+                                        android:textSize="28sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                                    <TextView
+                                        android:id="@+id/textView24"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lemonmil_bold"
+                                        android:gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:text="While"
+                                        android:textColor="@color/white"
+                                        android:textColorHighlight="@color/white"
+                                        android:textSize="28sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+                                    <TextView
+                                        android:id="@+id/textView25"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lemonmil_bold"
+                                        android:gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:text="Travelling"
+                                        android:textColor="@color/white"
+                                        android:textColorHighlight="@color/white"
+                                        android:textSize="28sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                                    <TextView
+                                        android:id="@+id/textView12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:fontFamily="@font/poppinslight"
+                                        android:gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:text="View more..."
+                                        android:textColor="@color/white"
+                                        android:textColorHighlight="@color/white"
+                                        android:textSize="18sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 

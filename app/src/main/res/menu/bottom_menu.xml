@@ -4,31 +4,31 @@
 
     <item
         android:id="@+id/home_menu"
-        android:icon="@drawable/ic_home_fl"
+        android:icon="@drawable/home"
         android:title="Home"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/package_menu"
-        android:icon="@drawable/ic_package_foreground"
+        android:icon="@drawable/packages"
         android:title="Packages"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/moments_menu"
-        android:icon="@drawable/ic_social_foreground"
+        android:icon="@drawable/compass_img"
         android:title="Moments"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/map_menu"
-        android:icon="@drawable/ic_map_foreground"
+        android:icon="@drawable/map"
         android:title="Maps"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/about_menu"
-        android:icon="@drawable/ic_about_foreground"
+        android:icon="@drawable/about"
         android:title="About"
         app:showAsAction="always" />
 
