@@ -42,13 +42,13 @@ public class AboutActivity extends AppCompatActivity {
                 startActivityWithSelectedMenuItem(HomeActivity.class, R.id.home_menu);
                 return true;
             } else if (itemId == R.id.package_menu) {
-                startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.package_menu);
+                startActivityWithSelectedMenuItem(PackagesActivity.class, R.id.package_menu);
                 return true;
             } else if (itemId == R.id.map_menu) {
                 startActivityWithSelectedMenuItem(MapsActivity.class, R.id.map_menu);
                 return true;
             } else if (itemId == R.id.moments_menu) {
-                startActivityWithSelectedMenuItem(AboutActivity.class, R.id.moments_menu);
+                startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.moments_menu);
                 return true;
             }
             return false;
@@ -57,12 +57,9 @@ public class AboutActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(selectedMenuItemId);
 
         Button button1 = findViewById(R.id.aboutus);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AboutActivity.this, AboutUsActivity.class);
-                startActivity(intent);
-            }
+        button1.setOnClickListener(v -> {
+            Intent intent = new Intent(AboutActivity.this, AboutUsActivity.class);
+            startActivity(intent);
         });
 
         Button button15 = findViewById(R.id.button15);
@@ -97,29 +94,23 @@ public class AboutActivity extends AppCompatActivity {
 
 
             Button button13 = findViewById(R.id.button13);
-            button13.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                    emailIntent.setData(Uri.parse("mailto:"));
-                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"scompass@gmail.com"});
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Suggestion");
-                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, I have a suggestion:");
-                    startActivity(Intent.createChooser(emailIntent, "Choose an Email Client"));
-                }
+            button13.setOnClickListener(v -> {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"scompass@gmail.com"});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Suggestion");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, I have a suggestion:");
+                startActivity(Intent.createChooser(emailIntent, "Choose an Email Client"));
             });
 
             Button button11 = findViewById(R.id.button11);
-            button11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                    emailIntent.setData(Uri.parse("mailto:"));
-                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"scompass@gmail.com"});
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Delete My Post");
-                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, I Want to delete my post            (ATTACH THE POST SCREENSHOT YOU WANT TO REMOVE)");
-                    startActivity(Intent.createChooser(emailIntent, "Choose an Email Client"));
-                }
+            button11.setOnClickListener(v -> {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"scompass@gmail.com"});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Delete My Post");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, I Want to delete my post            (ATTACH THE POST SCREENSHOT YOU WANT TO REMOVE)");
+                startActivity(Intent.createChooser(emailIntent, "Choose an Email Client"));
             });
 
         }
@@ -134,6 +125,7 @@ public class AboutActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         finish();
     }
 

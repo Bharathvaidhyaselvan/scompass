@@ -20,6 +20,31 @@ public class PackagesActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+        Button button2 = findViewById(R.id.button2);
+        Button button1 = findViewById(R.id.button1);
+        Button button4 = findViewById(R.id.button4);
+        Button button6 = findViewById(R.id.button6);
+
+        button2.setOnClickListener(view -> {
+            Intent intent = new Intent(PackagesActivity.this, ChennaitoKodaikanal.class);
+            startActivity(intent);
+        });
+
+        button1.setOnClickListener(view -> {
+            Intent intent = new Intent(PackagesActivity.this, ChennaitoOoty.class);
+            startActivity(intent);
+        });
+
+        button4.setOnClickListener(view -> {
+            Intent intent = new Intent(PackagesActivity.this, ChennaitoKollihills.class);
+            startActivity(intent);
+        });
+
+        button6.setOnClickListener(view -> {
+            Intent intent = new Intent(PackagesActivity.this, ChennaiToYelagiriActivity.class);
+            startActivity(intent);
+        });
+
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.package_menu) {

@@ -59,6 +59,7 @@ public class MomentsActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.moments_menu) {
@@ -67,7 +68,7 @@ public class MomentsActivity extends AppCompatActivity {
                 startActivityWithSelectedMenuItem(HomeActivity.class, R.id.home_menu);
                 return true;
             } else if (itemId == R.id.package_menu) {
-                startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.package_menu);
+                startActivityWithSelectedMenuItem(PackagesActivity.class, R.id.package_menu);
                 return true;
             } else if (itemId == R.id.map_menu) {
                 startActivityWithSelectedMenuItem(MapsActivity.class, R.id.map_menu);
@@ -78,6 +79,7 @@ public class MomentsActivity extends AppCompatActivity {
             }
             return false;
         });
+
         int selectedMenuItemId = getIntent().getIntExtra("selectedMenuItemId", R.id.moments_menu);
         bottomNavigationView.setSelectedItemId(selectedMenuItemId);
 

@@ -591,7 +591,7 @@
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
                                         android:textSize="24sp"
-                                        app:layout_constraintBottom_toTopOf="@+id/button6"
+                                        app:layout_constraintBottom_toTopOf="@+id/button5"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.0"
                                         app:layout_constraintStart_toStartOf="parent"
@@ -599,7 +599,7 @@
                                         app:layout_constraintVertical_bias="0.675" />
 
                                     <Button
-                                        android:id="@+id/button6"
+                                        android:id="@+id/button5"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="24dp"

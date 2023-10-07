@@ -67,6 +67,7 @@ public class UploadActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         startActivity(new Intent(UploadActivity.this, MomentsActivity.class));
         finish();
     }

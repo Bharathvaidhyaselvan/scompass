@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChennaitoOoty">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="-25dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ooty" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lemonmil_bold"
+                        android:text="OOTY"
+                        android:textColor="@color/green"
+                        android:textSize="27sp" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tamil Nadu"
+                        android:textColor="@color/mediumgreen" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lemonmil_bold"
+                        android:text="Rs.1900"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="per person"
+                        android:textColor="@color/mediumgreen" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsblack"
+                android:text="Itinerary:"
+                android:textColor="@color/green"
+                android:textColorHighlight="@color/green"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:paddingStart="5dp"
+                android:text="Welcome to Ooty Camping Adventure!\n\n**Day 1: Departure**\n- Start your journey from Chennai or Bangalore early in the morning.\n- Drive to Ooty, which takes approximately 6-7 hours from Bangalore and around 9-10 hours from Chennai.\n- Arrive in Ooty by late afternoon or early evening.\n- Check-in at a campsite or a campsite-resort in Ooty.\n- Spend the evening relaxing at the campsite, enjoying the beautiful surroundings.\n\n**Day 2: Explore Ooty**\n- After breakfast, head out to explore Ooty's famous attractions.\n- Visit Ooty Lake for boating and scenic views.\n- Explore the Botanical Gardens and Rose Garden.\n- Have lunch in the town.\n- Visit Doddabetta Peak for panoramic views of the Nilgiri Hills.\n- Return to the campsite for dinner and overnight stay.\n\n**Day 3: Trekking and Adventure**\n- Start the day with an early breakfast.\n- Embark on a trek in the Nilgiri Hills. Some popular trekking spots include the Nilgiri Biosphere Reserve and the Nilgiri Mountain Railway trail.\n- Have a packed lunch during the trek.\n- Return to the campsite in the evening.\n- Enjoy a bonfire and dinner at the campsite.\n\n**Day 4: Visit Coonoor**\n- Check out from the campsite after breakfast.\n- Drive to Coonoor, a nearby hill station known for its tea gardens.\n- Visit tea estates like the Sims Park and Dolphin's Nose Viewpoint.\n- Have lunch in Coonoor.\n- In the afternoon, drive back to Ooty and check-in at a different campsite or resort.\n- Spend the evening at leisure or exploring Ooty's local markets.\n\n**Day 5: Departure**\n- After breakfast, check out from the campsite.\n- If time permits, visit any remaining attractions in Ooty.\n- Start your journey back to Chennai or Bangalore.\n- Arrive back in your city by late evening or night, concluding your camping trip to Ooty.\n\nRemember to check the local weather conditions and any travel restrictions before your trip. Also, make sure to book accommodations and activities in advance, especially during peak tourist seasons. Enjoy your camping adventure in the beautiful Nilgiri Hills!"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_bg_green"
+        android:elevation="2dp"
+        android:text="Book Now"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

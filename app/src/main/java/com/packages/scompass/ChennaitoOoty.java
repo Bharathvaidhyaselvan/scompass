@@ -7,12 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ChennaiToYelagiriActivity extends AppCompatActivity {
+public class ChennaitoOoty extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chennai_to_yelagiri);
+        setContentView(R.layout.activity_chennaitoooty);
 
         Button callButton = findViewById(R.id.button);
 
@@ -23,6 +23,6 @@ public class ChennaiToYelagiriActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        
+
     }
 }
