@@ -453,6 +453,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
         android:background="@drawable/btm_nav_bg"
         app:itemIconTint="@color/green"
         app:itemTextColor="@color/green"

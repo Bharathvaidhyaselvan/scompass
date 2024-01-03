@@ -25,9 +25,6 @@ public class GoGreen extends AppCompatActivity {
             int itemId = item.getItemId();
             if (itemId == R.id.home_menu) {
                 return true;
-            } else if (itemId == R.id.package_menu) {
-                startActivityWithSelectedMenuItem(PackagesActivity.class, R.id.package_menu);
-                return true;
             } else if (itemId == R.id.moments_menu) {
                 startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.moments_menu);
                 return true;

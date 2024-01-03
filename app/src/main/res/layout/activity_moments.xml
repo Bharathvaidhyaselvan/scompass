@@ -142,6 +142,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/btm_nav_bg"
+        app:labelVisibilityMode="unlabeled"
         app:itemIconTint="@color/green"
         app:itemTextColor="@color/green"
         app:menu="@menu/bottom_menu" />

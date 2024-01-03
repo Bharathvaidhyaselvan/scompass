@@ -9,12 +9,6 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/package_menu"
-        android:icon="@drawable/packages"
-        android:title="Packages"
-        app:showAsAction="always" />
-
-    <item
         android:id="@+id/moments_menu"
         android:icon="@drawable/compass_img"
         android:title="Moments"

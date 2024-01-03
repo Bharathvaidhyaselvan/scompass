@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "486261985216-1d3b7hlktfbr4lr2dp6qsqgm34cpmcai.apps.googleusercontent.com",
+          "client_id": "486261985216-ovbqt5ut9loq8dme9mm5cvsqvqc76a4c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.packages.scompass",
-            "certificate_hash": "c9f93cd1239bec47ca043fbb4b7d9db761c6066d"
+            "certificate_hash": "a49b4a7095be3726a3606a694fa5a20d6a485354"
           }
         },
         {

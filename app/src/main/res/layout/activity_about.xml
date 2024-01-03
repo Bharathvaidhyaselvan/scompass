@@ -1,14 +1,13 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightgreen"
     android:paddingLeft="0dp"
     android:paddingTop="0dp"
     android:paddingRight="0dp"
     android:paddingBottom="0dp"
-    android:background="@color/white"
     tools:context=".AboutActivity">
 
     <LinearLayout
@@ -17,8 +16,8 @@
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:background="@color/green"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 
@@ -31,10 +30,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/traveler_s_profile"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textAlignment="viewStart"
                 tools:ignore="RtlCompat" />
 
             <TextView
@@ -158,6 +157,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/btm_nav_bg"
+        app:labelVisibilityMode="unlabeled"
         app:itemIconSize="23dp"
         app:itemIconTint="@color/green"
         app:itemTextColor="@color/green"

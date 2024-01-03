@@ -2,10 +2,12 @@ package com.packages.scompass;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,10 +32,17 @@ public class AboutUsActivity extends AppCompatActivity {
         ImageView instagramImageView = findViewById(R.id.instagram);
         ImageView twitterImageView = findViewById(R.id.twitter);
 
+        Drawable instagramDrawable = getResources().getDrawable(R.drawable.ic_instagram);
+        int sizeInPixels = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics());
 
+        instagramDrawable.setBounds(0, 0, sizeInPixels, sizeInPixels);
+
+        instagramArish.setCompoundDrawables(instagramDrawable, null, null, null);
+        instagramBVS.setCompoundDrawables(instagramDrawable, null, null, null);
 
         instagramArish.setOnClickListener(view -> openInstagramProfile("https://www.instagram.com/arishragaventhra/"));
-        instagramBVS.setOnClickListener(view -> openInstagramProfile("https://www.instagram.com/bharathbvs/"));
+        instagramBVS.setOnClickListener(view -> openInstagramProfile("https://www.instagram.com/bvs.dev/"));
 
         facebookImageView.setOnClickListener(view -> openUrl("https://www.facebook.com/people/Scompass/100087396342680/"));
         instagramImageView.setOnClickListener(view -> openUrl("https://www.instagram.com/_scompass_/"));
@@ -47,9 +56,6 @@ public class AboutUsActivity extends AppCompatActivity {
                 return true;
             } else if (itemId == R.id.home_menu) {
                 startActivityWithSelectedMenuItem(HomeActivity.class, R.id.home_menu);
-                return true;
-            } else if (itemId == R.id.package_menu) {
-                startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.package_menu);
                 return true;
             } else if (itemId == R.id.map_menu) {
                 startActivityWithSelectedMenuItem(MapsActivity.class, R.id.map_menu);

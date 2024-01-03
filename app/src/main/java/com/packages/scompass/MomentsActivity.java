@@ -67,9 +67,6 @@ public class MomentsActivity extends AppCompatActivity {
             } else if (itemId == R.id.home_menu) {
                 startActivityWithSelectedMenuItem(HomeActivity.class, R.id.home_menu);
                 return true;
-            } else if (itemId == R.id.package_menu) {
-                startActivityWithSelectedMenuItem(PackagesActivity.class, R.id.package_menu);
-                return true;
             } else if (itemId == R.id.map_menu) {
                 startActivityWithSelectedMenuItem(MapsActivity.class, R.id.map_menu);
                 return true;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
-    android:background="@color/bgwhite"
+    android:background="@color/lightgreen"
     android:paddingLeft="0dp"
     android:paddingTop="0dp"
     android:paddingRight="0dp"
@@ -215,7 +215,7 @@
                     android:text="Arish Ragaventhra"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/black"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/instagram_arish"
@@ -227,7 +227,8 @@
                     android:text="Instagram"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
+
 
                 <View
                     android:id="@+id/view2"
@@ -264,7 +265,7 @@
                     android:text="Instagram"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
@@ -275,6 +276,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
         android:background="@drawable/btm_nav_bg"
         app:itemIconTint="@color/green"
         app:itemTextColor="@color/green"

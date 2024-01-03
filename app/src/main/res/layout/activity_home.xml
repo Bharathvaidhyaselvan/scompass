@@ -79,8 +79,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/emergency"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center|center_horizontal|center_vertical"
                     android:foregroundGravity="center_vertical|center_horizontal"
                     app:cardBackgroundColor="#EFF0F0"
@@ -92,8 +92,8 @@
 
                         <ImageView
                             android:id="@+id/imageView4"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -240,7 +240,6 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical">
-                                <!-- Card content here -->
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
@@ -366,17 +365,38 @@
                     android:paddingStart="10dp"
                     android:visibility="visible">
 
-                    <TextView
-                        android:id="@+id/top_packages_text"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/lemonmil_bold"
-                        android:paddingTop="16dp"
-                        android:paddingBottom="8dp"
-                        android:text="Top Packages:"
-                        android:textColor="@color/green"
-                        android:textSize="20sp" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/top_packages_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/lemonmil_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="8dp"
+                            android:text="Top Packages:"
+                            android:textColor="@color/green"
+                            android:textSize="20sp" />
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/view_more_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View More"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
 
                     <HorizontalScrollView
                         android:id="@+id/packages_scroll"
@@ -385,7 +405,8 @@
                         android:layout_gravity="center|center_horizontal|center_vertical"
                         android:foregroundGravity="center"
                         android:padding="@dimen/home_padding"
-                        android:scrollbars="none">
+                        android:scrollbars="none"
+                        android:visibility="visible">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -552,7 +573,7 @@
                                         app:layout_constraintHorizontal_bias="0.0"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintVertical_bias="0.736" />
+                                        app:layout_constraintVertical_bias="0.67" />
 
                                     <Button
                                         android:id="@+id/button4"
@@ -612,7 +633,7 @@
                                         app:layout_constraintHorizontal_bias="0.0"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintVertical_bias="0.675" />
+                                        app:layout_constraintVertical_bias="0.67" />
 
                                     <Button
                                         android:id="@+id/button5"
@@ -644,17 +665,19 @@
                     android:layout_marginTop="20dp"
                     android:orientation="vertical"
                     android:paddingStart="20dp"
-                    android:paddingEnd="20dp">
+                    android:paddingEnd="20dp"
+                    android:visibility="visible">
 
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
+                        android:layout_marginBottom="25dp"
                         app:cardBackgroundColor="#EFF0F0"
                         app:cardCornerRadius="15dp">
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/imageView123"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scaleType="centerCrop"
@@ -681,18 +704,18 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <TextView
-                                        android:id="@+id/textView22"
+                                        android:id="@+id/textView247"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="60dp"
-                                        android:fontFamily="@font/lemonmil_bold"
-                                        android:gravity="center"
-                                        android:paddingLeft="8dp"
+                                        android:layout_marginTop="40dp"
+                                        android:fontFamily="@font/norwester"
+                                        android:gravity="left"
+                                        android:paddingLeft="16dp"
                                         android:paddingRight="8dp"
                                         android:text="Don't"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="28sp"
+                                        android:textSize="34sp"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
@@ -701,30 +724,30 @@
                                         android:id="@+id/textView23"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:fontFamily="@font/lemonmil_bold"
-                                        android:gravity="center"
-                                        android:paddingLeft="8dp"
+                                        android:fontFamily="@font/norwester"
+                                        android:gravity="left"
+                                        android:paddingLeft="16dp"
                                         android:paddingRight="8dp"
                                         android:text="Litter"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="28sp"
+                                        android:textSize="34sp"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                                        app:layout_constraintTop_toBottomOf="@+id/textView247" />
 
                                     <TextView
                                         android:id="@+id/textView24"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:fontFamily="@font/lemonmil_bold"
-                                        android:gravity="center"
-                                        android:paddingLeft="8dp"
+                                        android:fontFamily="@font/norwester"
+                                        android:gravity="left"
+                                        android:paddingLeft="16dp"
                                         android:paddingRight="8dp"
                                         android:text="While"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="28sp"
+                                        android:textSize="34sp"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -733,14 +756,14 @@
                                         android:id="@+id/textView25"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:fontFamily="@font/lemonmil_bold"
-                                        android:gravity="center"
-                                        android:paddingLeft="8dp"
+                                        android:fontFamily="@font/norwester"
+                                        android:gravity="left"
+                                        android:paddingLeft="16dp"
                                         android:paddingRight="8dp"
                                         android:text="Travelling"
                                         android:textColor="@color/white"
                                         android:textColorHighlight="@color/white"
-                                        android:textSize="28sp"
+                                        android:textSize="34sp"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toBottomOf="@+id/textView24" />
@@ -752,8 +775,8 @@
                                         android:layout_marginTop="2dp"
                                         android:layout_marginBottom="8dp"
                                         android:fontFamily="@font/poppinslight"
-                                        android:gravity="center"
-                                        android:paddingLeft="8dp"
+                                        android:gravity="left"
+                                        android:paddingLeft="16dp"
                                         android:paddingRight="8dp"
                                         android:text="View more..."
                                         android:textColor="@color/white"
@@ -767,12 +790,12 @@
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -789,6 +812,7 @@
             android:background="@drawable/btm_nav_bg"
             app:itemIconTint="@color/green"
             app:itemTextColor="@color/green"
+            app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottom_menu" />
     </LinearLayout>
 </RelativeLayout>

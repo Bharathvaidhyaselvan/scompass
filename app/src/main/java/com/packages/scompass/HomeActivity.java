@@ -1,17 +1,20 @@
 package com.packages.scompass;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -31,7 +34,6 @@ public class HomeActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     String userName;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         userNameTextView = findViewById(R.id.user_name_text_view);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         LinearLayout cardQuoteAlign = findViewById(R.id.card_quote_align);
+        TextView viewMoreText = findViewById(R.id.view_more_text);
 
         CardView cardHotels = findViewById(R.id.hotels);
         CardView cardHangouts = findViewById(R.id.hangouts);
@@ -73,7 +76,6 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
         cardHotels.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, HotelsActivity.class);
             startActivity(intent);
@@ -104,7 +106,6 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
         if (!isNetworkConnected()) {
             Intent intent = new Intent(this, NoConnectionActivity.class);
             startActivity(intent);
@@ -112,42 +113,38 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
+        if (!areNotificationsEnabled()) {
+            showEnableNotificationsDialog();
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.home_menu) {
-                return true;
-            } else if (itemId == R.id.package_menu) {
-                startActivityWithSelectedMenuItem(PackagesActivity.class, R.id.package_menu);
-                return true;
-            } else if (itemId == R.id.moments_menu) {
-                startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.moments_menu);
-                return true;
-            } else if (itemId == R.id.map_menu) {
-                startActivityWithSelectedMenuItem(MapsActivity.class, R.id.map_menu);
-                return true;
-            } else if (itemId == R.id.about_menu) {
-                startActivityWithSelectedMenuItem(AboutActivity.class, R.id.about_menu);
-                return true;
+            if (itemId != R.id.home_menu) {
+                startActivityWithSelectedMenuItem(PackagesActivity.class, itemId);
             }
-            return false;
+            return true;
         });
+
         int selectedMenuItemId = getIntent().getIntExtra("selectedMenuItemId", R.id.home_menu);
         bottomNavigationView.setSelectedItemId(selectedMenuItemId);
+
+        viewMoreText.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, PackagesActivity.class);
+            startActivity(intent);
+        });
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             String userId = user.getUid();
-
             mDatabase.child("users").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     User userData = dataSnapshot.getValue(User.class);
                     if (userData != null) {
                         userName = userData.getName();
-                        SharedPreferences.Editor s = getSharedPreferences("USER", MODE_PRIVATE).edit();
-                        s.putString("user_name", userName);
-                        s.apply();
+                        SharedPreferences.Editor editor = getSharedPreferences("USER", MODE_PRIVATE).edit();
+                        editor.putString("user_name", userName);
+                        editor.apply();
                         userNameTextView.setText(userName);
                     }
                 }
@@ -160,6 +157,14 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (!areNotificationsEnabled()) {
+            showEnableNotificationsDialog();
+        }
+    }
 
     private void startActivityWithSelectedMenuItem(Class<?> destinationActivity, int selectedMenuItemId) {
         Intent intent = new Intent(this, destinationActivity);
@@ -171,5 +176,28 @@ public class HomeActivity extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private boolean areNotificationsEnabled() {
+        return true;
+    }
+
+    private void showEnableNotificationsDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enable Notifications");
+        builder.setMessage("Turn on notifications to stay updated with the latest Packages, Events and more.");
+        builder.setPositiveButton("Enable", (dialog, which) -> {
+            openAppSettings();
+            dialog.dismiss();
+        });
+
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
+        builder.create().show();
+    }
+
+    private void openAppSettings() {
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        intent.setData(android.net.Uri.parse("package:" + getPackageName()));
+        startActivity(intent);
     }
 }

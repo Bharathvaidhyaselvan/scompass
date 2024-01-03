@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 Log.e("Error-",String.valueOf(e));
-                Toast.makeText(LoginActivity.this, "Google Sign-In failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "oops, Sign-In failed. Try Again.", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -113,8 +113,7 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.putBoolean("isAuthenticated", true);
                                     editor.apply();
 
-                                    Toast.makeText(LoginActivity.this, "Authentication Successful", Toast.LENGTH_SHORT).show();
-                                    // Pass the user's name to the HomeActivity using an Intent
+                                    Toast.makeText(LoginActivity.this, "Authentication Successful 😊", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(LoginActivity.this, HomeActivity.class)
                                             .putExtra("user_name", userName));
                                     finish();
@@ -125,7 +124,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "User is null", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "oops, Authentication Failed 😥", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -138,7 +137,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void saveProfileImageUrlToDatabase(String imageUrl) {
-        // Save the profile image URL to the Firebase Database under the user's data
         String userId = mAuth.getCurrentUser().getUid();
         mDatabase.child("users").child(userId).child("profileImageUrl").setValue(imageUrl);
     }

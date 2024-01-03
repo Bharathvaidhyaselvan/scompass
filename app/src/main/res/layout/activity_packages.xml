@@ -320,6 +320,7 @@
         android:background="@drawable/btm_nav_bg"
         app:itemIconTint="@color/green"
         app:itemTextColor="@color/green"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
 
 </RelativeLayout>

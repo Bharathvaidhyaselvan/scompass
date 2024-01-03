@@ -47,10 +47,7 @@ public class PackagesActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.package_menu) {
-                return true;
-            } else if (itemId == R.id.home_menu) {
-                startActivityWithSelectedMenuItem(HomeActivity.class, R.id.home_menu);
+            if (itemId == R.id.home_menu) {
                 return true;
             } else if (itemId == R.id.moments_menu) {
                 startActivityWithSelectedMenuItem(MomentsActivity.class, R.id.moments_menu);
@@ -64,7 +61,7 @@ public class PackagesActivity extends AppCompatActivity {
             }
             return false;
         });
-        int selectedMenuItemId = getIntent().getIntExtra("selectedMenuItemId", R.id.package_menu);
+        int selectedMenuItemId = getIntent().getIntExtra("selectedMenuItemId", R.id.home_menu);
         bottomNavigationView.setSelectedItemId(selectedMenuItemId);
 
     }
@@ -77,6 +74,7 @@ public class PackagesActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         finish();
     }
 
